@@ -17,7 +17,8 @@
           </thead>
           <tbody>
             <th><%= image_tag @user.get_profile_image %></th> 
-            <th><%= @book.title %></th>
+             <th><%= link_to  book_path ,class:"edit_link" do %><%= @book.title %><% end %></th>
+           
               <th><%= @book.body %></th>
           </tbody>
         </table>

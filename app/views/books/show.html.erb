@@ -10,25 +10,26 @@
       <h2>Books Detail</h2>
         <table class="table table-hover table-inverse">
           <thead>
-           
+
           </thead>
           <tbody>
-           
-           <th><%= image_tag @user.get_profile_image %><br> <%= @user.name %> </th>　 
-          
-              <th><%= @book.title %></th>
+
+           <th><%= image_tag @user.get_profile_image %><br> <%= link_to  users_path(current_user.id) ,class:"edit_link" do %><%= @user.name %> <% end %></th>
+
+              <th><%= link_to  book_path ,class:"edit_link" do %><%= @book.title %> <% end %>
+                </th>
               <th><%= @book.body %></th>
-                
-              
+
+
               <th><%= link_to 'Edit', edit_book_path, class: "btn btn-success btn-sm" %>
               </th>
               <th>
                 <%= link_to 'Destroy', book_path, class: "btn btn-danger btn-sm" %>
-              
+
               </th>
-                
-             
-          
+
+
+
           </tbody>
         </table>
     </div>
