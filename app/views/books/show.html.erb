@@ -1,10 +1,13 @@
-
+ <div>
+  <%= flash[:notice] %>
+</div>
 
 <div class= "container">
   <div class= "row">
 
     <div class="col-md-3 ">
-        <%= render 'lists', book: Book.new, user: @user  %>
+       <%= render 'errors', user: @user %>
+        <%= render 'lists', book: Book.new, user: @user %>
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Books Detail</h2>
@@ -24,7 +27,7 @@
               <th><%= link_to 'Edit', edit_book_path, class: "btn btn-success btn-sm" %>
               </th>
               <th>
-                <%= link_to 'Destroy', book_path, class: "btn btn-danger btn-sm" %>
+                <%= link_to 'Destroy', book_path, method: :delete, class: "btn btn-danger btn-sm" ,"data-confirm" => "本当に削除しますか？" %>
 
               </th>
 

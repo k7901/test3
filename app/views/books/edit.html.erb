@@ -1,8 +1,11 @@
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-m-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
   		<h1>Editing Book</h1>
-    	  <table class="table">
+    	  
 
     	  <% if @book.errors.any? %>
         <%= @book.errors.count %>errors prohibited this book from being saved:
@@ -22,7 +25,8 @@
            <%= f.text_area :body , size: "50x3" %>
 
 
-          <%= link_to 'Update Book', book_path, class: "btn btn-success btn-sm" %>
+
+          <%= f.submit "Update Book", class: "btn btn-success btn-sm" %>
 
 
          <% end %>
@@ -31,7 +35,7 @@
          <%= link_to 'Show', book_path, class: "edit_link btn-sm" %>
          |
           <%= link_to 'Back', books_path, class: " edit_link btn-sm" %>
-        </table>
+       
     </div>
   </div>
 </div>
