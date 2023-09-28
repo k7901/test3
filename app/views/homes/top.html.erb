@@ -1,10 +1,18 @@
+<div class="mx-auto col-5 ">
 
-<div class="col-md-6 mx-auto mt-6">
-  <h1>welcome to <strong>Bookers</strong>  !!</span></h1>
-  <p>In  <span class="glyphicon glyphicon-book"></span><strong>Bookers</strong>, </p>
-  <p>SNS community that indiscriminately stimulates the appetite of sensible citizens.</p>
-  <div class="row">
-   <p class="ml-3"><a class="btn btn-info" href="/users/sign_in">Log in</a></p>
-   <p class="ml-3"><a class="btn btn-success" href="/users/sign_up">Sign Up</a></p>
+
+  <div class= "col m-3 p-3">
+    <h1>welcome to <i class="fa-solid fa-book"></i><strong>Bookers</strong>  !!</span></h1>
+    <p>In <i class="fa-solid fa-book"></i><strong>Bookers</strong>, </p>
+    <p>you can share and exchange your opinions , inpressions , and emotions</p> <br>
+    <p>about various books!</p>
+  </div>
+   <div class="btn-wrapper col-10 mx-auto">
+    <div class="row">
+      <div class= "col p-3">
+       <%= link_to 'Log in',new_user_session_path , class: "btn btn-info btn-block btn-sm" %>
+       <%= link_to 'Sign up',new_user_registration_path , class: "btn btn-success btn-block btn-sm" %>
+      </div>
   </div>
 </div>
+<div class="col-md-6 mx-auto mt-6">
