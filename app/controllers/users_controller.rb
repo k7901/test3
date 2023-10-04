@@ -32,7 +32,7 @@ before_action :is_matching_login_user, only: [:edit, :update]
   private
 
   def user_params
-    params.require(:user).permit(:name, :image, :introduction)
+    params.require(:user).permit(:name, :profile_image, :introduction)
   end
 
   def is_matching_login_user
